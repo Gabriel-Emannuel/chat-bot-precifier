@@ -1,7 +1,9 @@
 dotenv
 langchain
-langchain-openai
+langchain-ollama
 langchain-community
 langgraph
 beautifulsoup4
 requests
+huggingface_hub
+faiss-cpu
