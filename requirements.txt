@@ -9,3 +9,4 @@ faiss-cpu
 fastapi[standard]
 uvicorn[standard]
 pydantic
+ollama
