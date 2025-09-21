@@ -1,9 +1,12 @@
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from re import search
+from typing import Literal
 
 from src.graph.schema import InputState, CategoryState, OutputState, PriceState
 from src.ollama.llm import chat
+
+PATTERN_INVALID_CATEGORY = r"(Entrada inválida.)"
 
 ASSISTANT_IDENTIFIER_CATEGORY = SystemMessage(
     content="""Você é um assistente especializado em identificar se a entrada recebida é passível de processamento. Para uma entrada ser processada, é necessário que ela possa ser utilizada para buscar preços. Para verificar se uma entrada pode ser usada para buscar preços, verifique se a entrada pode participar das seguintes categorias:
@@ -108,3 +111,11 @@ def generate_error_message(category_state: CategoryState) -> OutputState:
     """
 
     return {"answer": answer}
+
+
+def verify_category_state(
+    category_state: CategoryState,
+) -> Literal["error-node", "product-node"]:
+    if search(PATTERN_INVALID_CATEGORY, category_state["category"]):
+        return "error-node"
+    return "product-node"
