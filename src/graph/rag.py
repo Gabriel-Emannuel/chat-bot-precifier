@@ -2,7 +2,11 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 from src.graph.schema import CategoryState, ProductState, PriceState
 from src.ollama.llm import chat
-from src.rag.rag import generate_vector_store, web_search_rag
+from src.rag.rag import (
+    generate_vector_store,
+    web_search_rag,
+    generate_documents_from_web,
+)
 
 ASSISTANT_IDENTIFY_PRODUCT = SystemMessage(
     content="""Você é um assistente especializado em identificar qual é o produto especificado para busca de preços a partir da entrada.
@@ -29,7 +33,9 @@ def generate_price(product_state: ProductState) -> PriceState:
         PriceState: Same state plus price research.
     """
 
-    vector_store = generate_vector_store(product_state["product"])
+    documents = generate_documents_from_web(product_state["product"])
+
+    vector_store = generate_vector_store(documents)
 
     retrieval = web_search_rag(vector_store, 10, product_state["query"])
 

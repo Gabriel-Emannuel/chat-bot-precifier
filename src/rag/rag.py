@@ -7,14 +7,14 @@ from src.rag.web import web_search
 from src.ollama.embedding import embeddings
 
 
-def generate_vector_store(product_name: str) -> FAISS:
-    """Generate a vector store from product name.
+def generate_documents_from_web(product_name: str) -> list[Document]:
+    """Generate a document list from product name.
 
     Args:
         product_name (str): product name.
 
     Returns:
-        FAISS: vector store.
+        list[Document]: document list.
     """
 
     price_web_search = web_search(product_name)
@@ -25,7 +25,20 @@ def generate_vector_store(product_name: str) -> FAISS:
 
     all_splits = text_splitter.split_documents([price_document])
 
-    vectorstore = FAISS.from_documents(all_splits, embeddings)
+    return all_splits
+
+
+def generate_vector_store(documents: list[Document]) -> FAISS:
+    """Generate a vector store from document list.
+
+    Args:
+        documents (list[Document]): documents.
+
+    Returns:
+        FAISS: vector store.
+    """
+
+    vectorstore = FAISS.from_documents(documents, embeddings)
 
     return vectorstore
 

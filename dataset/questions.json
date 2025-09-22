@@ -1,0 +1,42 @@
+[
+    {
+        "product": "geladeira",
+        "query": "Vou me casar em breve e quero uma geladeira. Não quero uma geladeira muito chique nem muito cara. Mas que atenda as necessidades de um casal."
+    },
+    {
+        "product": "fogão",
+        "query": "Estou em dúvida sobre fogão, qual a marca mais vendida, a marca mais custa benefício e a melhor marca. Que não ultrapasse o valor de 1200."
+    },
+    {
+        "product": "Celular Sansung S",
+        "query": "Eu preciso comprar um celular pra meu noivo, queria um modelo novo da Samsung. Algum da linha S, me passe valores e separe os aparelhos com melhores características de processamento e armazenamento."
+    },
+    {
+        "product": "Máquina de lavar 15 kg",
+        "query": "Gostaria de uma Máquina de lavar de 15kg, mas com preço acessível, de preferencia consul ou eletrolux. Mas me diga também, pra duas pessoas que não sujam tantas roupas, 15kg é ideal?"
+    },
+    {
+        "product": "Notebook Lenovo HP",
+        "query": "Notebook lenovo, me parece bom, mas estou em dúvida entre HP. Poderia me apresentar as configurações de cada um?  Leve em consideração que eu sou um programador e trabalho desensolvendo softwares."
+    },
+    {
+        "product": "liquidificador",
+        "query": "Quero comprar um liquidificador, quais melhores marcas? Além disso, quais melhores lojas pra eu comprar?"
+    },
+    {
+        "product": "ar condicionado splir eletrolux",
+        "query": "Quero um ar condicionado splir eletrolux, qual valor"
+    },
+    {
+        "product": "Sansung Galaxy Z Fold7",
+        "query": "Qual loja tem o menor valor do Samsung Galaxy Z Fold7 512GB, 12GB RAM, Tela 8.0'' + 6.5'', Câmera Traseira 200+12+10MP, Frontal 10+10MP?"
+    },
+    {
+        "product": "Aspirador de pó vertical Britânia",
+        "query": "Em qual loja vende aspirador de pó vertical da Britânia?"
+    },
+    {
+        "product": "tv led LG 43",
+        "query": "Quero comprar um tv led LG de 43 polegadas, qual valor mais baixo e em qual loja?"
+    }
+]
