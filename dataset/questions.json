@@ -38,5 +38,45 @@
     {
         "product": "tv led LG 43",
         "query": "Quero comprar um tv led LG de 43 polegadas, qual valor mais baixo e em qual loja?"
+    },
+    {
+        "product": "Iphone 16",
+        "query": "Eu preciso de um novo iphone, se possível o 16. Eu quero tirar muitas fotos."
+    },
+    {
+        "product": "Televisão 4k",
+        "query": "Eu gosto muito de assistir filmes em 4K, principalmente na televisão."
+    },
+    {
+        "product": "Lavadoras",
+        "query": "Eu não gosto de lavar roupas, preciso de um aparaleho que lava e seca."
+    },
+    {
+        "product": "Macbook",
+        "query": "Eu quero um notebook da mesma marca do IPhone."
+    },
+    {
+        "product": "Geladeira",
+        "query": "Eu preciso de uma pequena geladeira para guardar meus doces."
+    },
+    {
+        "product": "ar condicionado",
+        "query": "Me dê a melhor opção de ar condicionado."
+    },
+    {
+        "product": "Fogão 6 bocas",
+        "query": "Fogão 6 bocas"
+    },
+    {
+        "product": "Celular Lg",
+        "query": "LG K10"
+    },
+    {
+        "product": "Notebook Dell",
+        "query": "Eu quero um notebook dell para rodar programas de IA"
+    },
+    {
+        "product": "Notebook ultra fino",
+        "query": "Quero a melhor opção de notebook ultra-fino dell"
     }
 ]
