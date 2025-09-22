@@ -11,9 +11,11 @@ if not LLM_MODEL:
 
 EMBEDDING_MODEL = str(getenv("EMBEDDING_MODEL"))
 OLLAMA_URL = str(getenv("OLLAMA_URL"))
+TRANSCRIPTION_MODEL = str(getenv("TRANSCRIPTION_MODEL"))
 
 
 class Settings:
     llm_model = LLM_MODEL
     embedding_model = EMBEDDING_MODEL
     ollama_url = OLLAMA_URL
+    transcription_model = TRANSCRIPTION_MODEL

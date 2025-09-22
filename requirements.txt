@@ -10,3 +10,6 @@ fastapi[standard]
 uvicorn[standard]
 pydantic
 ollama
+huggingface_hub
+transformers
+torch
