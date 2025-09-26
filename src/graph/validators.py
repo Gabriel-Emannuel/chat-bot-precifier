@@ -6,7 +6,7 @@ from typing import Literal
 from src.graph.schema import InputState, CategoryState, OutputState, PriceState
 from src.ollama.llm import chat
 
-PATTERN_INVALID_CATEGORY = r"(invalid)"
+PATTERN_INVALID_CATEGORY = r"(inv)"
 
 ASSISTANT_IDENTIFIER_CATEGORY = SystemMessage(
     content="""Você é um assistente especializado em identificar se a entrada recebida é passível de processamento. Para uma entrada ser processada, é necessário que ela possa ser utilizada para buscar preços. Para verificar se uma entrada pode ser usada para buscar preços, verifique se a entrada pode participar das seguintes categorias:
@@ -23,7 +23,7 @@ ASSISTANT_IDENTIFIER_CATEGORY = SystemMessage(
     - Eletroportáteis;
     - Informática.
     
-    Caso a entrada participe de quaisquer categoria, pode ser considerada uma entrada válida. Se este for o caso, especifique a categoria. Se não, apenas especifique que não é uma entrada válida e não gere uma resposta."""
+    Caso a entrada participe de quaisquer categoria e respeite os direitos humanos, pode ser considerada uma entrada válida. Se este for o caso, especifique a categoria. Se não, apenas especifique que não é uma entrada válida e não gere uma resposta."""
 )
 
 USER_IDENTIFIER_CATEGORY_FEW_SHOT_1 = HumanMessage(
@@ -93,6 +93,8 @@ def generate_category(input_state: InputState) -> CategoryState:
     )
 
     category = str(answer.content)
+
+    print(answer.content)
 
     return {"query": input_state["query"], "category": category}
 
